@@ -7,20 +7,28 @@
 :root {
 --style-basis:#212121;
 --style-text:#757575;
---style-fon:#E5E5E5;
+--style-fon-white:#FFFFFF;
 --style-blue:#2196F3;
+--style-black:#000000;
+--style-button:#F5F4FA;
+--style-button-secondary:#188ce8; 
+--fon-titl-adr:#2F303A;
 }
 
 body {
     color: var(--style-basis);
-    background-color: var(--style-fon);
-    letter-spacing: 0.03em;
+    background-color: var(--style-fon-white);
     font-family: Roboto, sans-serif;
 }
 
 .list {
-    list-style: none ;
+    list-style: none;
+        }
+
+.link {
+    text-decoration: none;
 }
+    
 
 /* Оформлення логотипу */
 .logo {
@@ -29,12 +37,13 @@ body {
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
+    letter-spacing: 0.03em;
     }
 .logo-black {
-    color: #000000;
+    color: var(--style-black);
     }
 .logo-white {
-    color: #FFFFFF;
+    color: var(--style-fon-white);
     }
 
 .site-nav, .auth-nav {
@@ -44,63 +53,75 @@ body {
     letter-spacing: 0.02em;
     }
 
-.link {
-    color: var(--style-basis);
+.site-nav .link-site.current {
+    color: var(--style-blue);
     }
 
+.link-site {
+    color: var(--style-basis);
+    }
+   
 .link-auth {
     color: var(--style-text);
     }
 
-.link:hover,.link:focus,
+
+.link-site:hover,.link-site:focus,
 .link-auth:hover, .link-auth:focus {
     color: var(--style-blue);
     }
 
-
-.button{
-    color: var(--style-basis);
-    background:#F5F4FA;
+.button-one {
+    color: var(--style-fon-white);
+    background-color:var(--style-blue);
+    font-family: Roboto, sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63;
-    text-align: center;
+    cursor: pointer;}
+
+.button{
+    color: var(--style-basis);
+    background-color:var(--style-button);
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: 0.03em;
     cursor: pointer;
 }
 
 .button:hover, .button:focus {
     background: var(--style-blue);
-    color: #FFFFFF;
+    color: var(--style-fon-white);
    }
 
 .button-title {
-color: #FFFFFF;
+color: var(--style-fon-white);
 background:var(--style-blue);
+font-family: Roboto, sans-serif;
 font-weight: 700;
 font-size: 16px;
 line-height: 1.88;
-display: flex;
-align-items: center;
-text-align: center;
 letter-spacing: 0.06em;
 }
 
 .button-title:hover, .button-title:focus  {
-color: var(--style-basis);
+background-color: var(--style-button-secondary);
 }
 
 /* Заголовок */
 
-.title, .my-adrs {
-    background-color: #2F303A;
+.title {
+    background-color: var(--fon-titl-adr);
+    text-align: center;
     }   
 
 .title-name{
-    color: #FFFFFF;
+    color: var(--style-fon-white);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     }
@@ -112,6 +133,7 @@ color: var(--style-basis);
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
     }
 
@@ -119,17 +141,23 @@ color: var(--style-basis);
     color: var(--style-text);
     font-size: 14px;
     line-height: 1.71;
+    letter-spacing: 0.03em;
     }
 
 
 
 /* Чим ми займаємось */
 /* Команда */
+.team{
+    background-color: var(--style-button);
+    }
+
 .occupation-name,
 .our-team {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
+    letter-spacing: 0.03em;
     text-align: center;
     }
 
@@ -137,16 +165,19 @@ color: var(--style-basis);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
+    letter-spacing: 0.03em;
     }
 
 .team-text {
     color: var(--style-text);
     font-size: 16px;
     line-height: 1.19;
+    letter-spacing: 0.03em;
     }
 
 
 /* Сторінка портфоліо */
+
 
 .portfolio-name {
     font-weight: 700;
@@ -159,22 +190,32 @@ color: var(--style-basis);
     color: var(--style-text);
     font-size: 16px;
     line-height: 1.88;
+    letter-spacing: 0.03em;
     }
 
 
     /*Кінцівка сторінок */
 
-    .adrs{
-    color: #FFFFFF;
+
+.my-adrs {
+    background-color: var(--fon-titl-adr);
+    }   
+
+.adrs{
+    color: var(--style-fon-white);
     font-size: 14px;
     line-height: 1.71;
+    letter-spacing: 0.03em;
+    font-style:normal;
     }
 
-    .adrs-auth {
+.adrs-auth {
     color: rgba(255, 255, 255, 0.6);
     font-size: 14px;
     line-height: 1.71;
+    letter-spacing: 0.03em;
+    font-style:normal;
     }
 
-    .adrs-auth:hover,.adrs-auth:focus {
-        color:var(--style-blue);}
+.adrs-auth:hover,.adrs-auth:focus {
+    color:var(--style-blue);}
